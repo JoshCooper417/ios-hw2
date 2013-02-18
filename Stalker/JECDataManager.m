@@ -10,4 +10,21 @@
 
 @implementation JECDataManager
 
+static JECDataManager *dataManager;
+
++ (JECDataManager *)dataManager
+{
+    
+    
+        if (!dataManager){
+            dataManager = [[JECDataManager alloc] init];
+            self.dataManager.locationManager = [[CLLocationManager alloc] init];
+            
+        }
+        
+        return dataManager;
+
+}
+
+
 @end

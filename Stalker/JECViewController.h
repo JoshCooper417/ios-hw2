@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
+#import "JECDataManager.h"
 
-@interface JECViewController : UIViewController
+@interface JECViewController : UIViewController <CLLocationManagerDelegate>
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic, retain) CLLocationManager *locationManager;
 
 @end
